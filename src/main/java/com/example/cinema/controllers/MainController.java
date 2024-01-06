@@ -15,19 +15,19 @@ public class MainController {
     private final CinemaService cinemaService;
 
 
-    @PostMapping("/save")
-    Cinema save(@RequestBody Cinema cinema) {
-        return cinemaService.save(cinema);
-    }
+//    @PostMapping("/save")
+//    Cinema save(@RequestBody Cinema cinema) {
+//        return cinemaService.save(cinema);
+//    }
 
-    @GetMapping("/find/by/id/{id}")
-    ResponseEntity<?> findById(@PathVariable Long id) {
-        try {
-            return ResponseEntity.ok(cinemaService.findById(id));
-        } catch (RuntimeException e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.I_AM_A_TEAPOT);
-        }
-    }
+//    @GetMapping("/find/by/id/{id}")
+//    ResponseEntity<?> findById(@PathVariable Long id) {
+//        try {
+//            return ResponseEntity.ok(cinemaService.findById(id));
+//        } catch (RuntimeException e) {
+//            return new ResponseEntity<>(e.getMessage(), HttpStatus.I_AM_A_TEAPOT);
+//        }
+//    }
 
 
     @PostMapping("/create")

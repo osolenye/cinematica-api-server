@@ -2,14 +2,15 @@ package com.example.cinema.services;
 
 import com.example.cinema.models.dto.CinemaCreateRequest;
 import com.example.cinema.models.Cinema;
+import com.example.cinema.models.dto.entityDto.CinemaDto;
 
 import java.util.List;
 
 public interface CinemaService {
-    Cinema save(Cinema cinema);
+    CinemaDto save(CinemaDto cinema);
     Cinema findById(Long id);
 
     List<Cinema> findAll();
 
-    Cinema create(CinemaCreateRequest request);
+    CinemaDto create(CinemaCreateRequest request);
 }
