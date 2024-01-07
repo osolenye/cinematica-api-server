@@ -39,9 +39,9 @@ public class CinemaServiceImpl implements CinemaService {
     public CinemaDto create(CinemaCreateRequest request) {
         CinemaDto cinema = new CinemaDto();
         cinema.setInfo(request.getInfo());
-        save(cinema);
+//        cinema = save(cinema);
         try {
-            return cinema;
+            return save(cinema);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
