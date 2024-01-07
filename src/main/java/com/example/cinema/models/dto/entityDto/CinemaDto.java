@@ -14,5 +14,6 @@ import javax.persistence.*;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CinemaDto {
     Long id;
-    String info;
+    String name;
+    String logo;
 }

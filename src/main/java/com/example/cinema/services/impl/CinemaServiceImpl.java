@@ -2,12 +2,15 @@ package com.example.cinema.services.impl;
 
 import com.example.cinema.dao.CinemaRepository;
 import com.example.cinema.mapper.CinemaMapper;
+import com.example.cinema.microservices.FileServiceFeign;
+import com.example.cinema.microservices.jsons.FileResponse;
 import com.example.cinema.models.dto.CinemaCreateRequest;
 import com.example.cinema.models.Cinema;
 import com.example.cinema.models.dto.entityDto.CinemaDto;
 import com.example.cinema.services.CinemaService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -16,6 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 public class CinemaServiceImpl implements CinemaService {
     private final CinemaRepository repository;
+    private final FileServiceFeign fileServiceFeign;
 
     @Override
     public CinemaDto save(CinemaDto cinema) {
@@ -36,11 +40,12 @@ public class CinemaServiceImpl implements CinemaService {
     }
 
     @Override
-    public CinemaDto create(CinemaCreateRequest request) {
-        CinemaDto cinema = new CinemaDto();
-        cinema.setInfo(request.getInfo());
-//        cinema = save(cinema);
+    public CinemaDto create(MultipartFile logo, CinemaCreateRequest request) {
         try {
+            CinemaDto cinema = new CinemaDto();
+            cinema.setName(request.getName());
+            FileResponse fileResponse = fileServiceFeign.upload(logo);
+            cinema.setLogo(fileResponse.getDownloadUri());
             return save(cinema);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());

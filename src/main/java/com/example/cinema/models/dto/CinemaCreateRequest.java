@@ -2,6 +2,7 @@ package com.example.cinema.models.dto;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @Setter
@@ -9,5 +10,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CinemaCreateRequest {
-    String info;
+    String name;
+//    String logo;
+    MultipartFile logo;
 }

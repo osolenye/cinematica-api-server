@@ -17,6 +17,7 @@ public class Cinema {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    @Column(unique = true)
-    String info;
+//    @Column(unique = true)
+    String name;
+    String logo;
 }
