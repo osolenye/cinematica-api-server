@@ -18,4 +18,7 @@ public class HallDto {
     HallType hallType;
 
     CinemaDto cinema;
+
+    int maxRow;
+    int maxColumn;
 }

@@ -56,6 +56,8 @@ public class HallServiceImpl implements HallService {
             System.out.println(cinema.getLogo());
             System.out.println(cinema.getId());
             CinemaDto cinemaDto = CinemaMapper.MAPPER.entityToDto(cinema);
+            hall.setMaxRow(request.getMaxRow());
+            hall.setMaxColumn(request.getMaxColumn());
             hall.setCinema(cinemaDto);
             return save(hall);
         } catch (Exception e) {

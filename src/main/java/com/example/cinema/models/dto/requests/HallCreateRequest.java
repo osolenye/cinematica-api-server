@@ -13,4 +13,6 @@ public class HallCreateRequest {
     String name;
     HallType hallType;
     Long cinemaId;
+    int maxRow;
+    int maxColumn;
 }

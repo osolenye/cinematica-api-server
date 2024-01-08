@@ -25,4 +25,7 @@ public class Hall {
     @ManyToOne
     @JoinColumn(name = "id_cinema")
     Cinema cinema;
+
+    int maxRow;
+    int maxColumn;
 }
