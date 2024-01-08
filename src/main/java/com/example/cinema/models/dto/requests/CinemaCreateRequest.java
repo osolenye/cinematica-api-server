@@ -1,4 +1,4 @@
-package com.example.cinema.models.dto;
+package com.example.cinema.models.dto.requests;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

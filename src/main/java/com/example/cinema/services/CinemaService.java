@@ -1,7 +1,7 @@
 package com.example.cinema.services;
 
-import com.example.cinema.models.dto.CinemaCreateRequest;
-import com.example.cinema.models.Cinema;
+import com.example.cinema.models.dto.requests.CinemaCreateRequest;
+import com.example.cinema.models.entities.Cinema;
 import com.example.cinema.models.dto.entityDto.CinemaDto;
 import org.springframework.web.multipart.MultipartFile;
 

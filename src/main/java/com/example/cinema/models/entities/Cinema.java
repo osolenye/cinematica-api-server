@@ -1,4 +1,4 @@
-package com.example.cinema.models;
+package com.example.cinema.models.entities;
 
 import javax.persistence.*;
 

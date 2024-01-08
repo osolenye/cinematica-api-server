@@ -1,13 +1,11 @@
 package com.example.cinema.controllers;
 
-import com.example.cinema.models.dto.CinemaCreateRequest;
-import com.example.cinema.models.Cinema;
+import com.example.cinema.models.dto.requests.CinemaCreateRequest;
 import com.example.cinema.services.CinemaService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/v1/cinema")

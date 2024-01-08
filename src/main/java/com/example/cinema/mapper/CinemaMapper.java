@@ -1,6 +1,6 @@
 package com.example.cinema.mapper;
 
-import com.example.cinema.models.Cinema;
+import com.example.cinema.models.entities.Cinema;
 import com.example.cinema.models.dto.entityDto.CinemaDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
