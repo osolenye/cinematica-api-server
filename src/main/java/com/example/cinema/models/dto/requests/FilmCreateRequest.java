@@ -14,4 +14,5 @@ public class FilmCreateRequest {
     String description;
     String genre;
     MultipartFile logo;
+    Long hallId;
 }
