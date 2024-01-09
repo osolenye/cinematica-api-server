@@ -37,7 +37,7 @@ public class FilmServiceImpl implements FilmService {
         result = repository.save(result);
         filmDto = FilmMapper.MAPPER.entityToDto(result);
 
-        filmHallService.create(filmDto, hallId);
+//        filmHallService.create(filmDto, hallId);
 
         return filmDto;
     }
@@ -67,7 +67,7 @@ public class FilmServiceImpl implements FilmService {
 //            filmHallDto.setFilm(filmDto);
 //            filmHallDto.setHall(HallMapper.MAPPER.entityToDto(hallService.findById(request.getHallId())));
 //            filmHallService.create(filmDto, request.getHallId());
-                hallId = request.getHallId();
+//                hallId = request.getHallId();
 
 
             return save(filmDto);

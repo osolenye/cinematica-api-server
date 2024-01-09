@@ -7,26 +7,24 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tb_hall")
-public class Hall {
+@Table(name = "tb_session")
+public class Session{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String name;
-    @Enumerated(value = EnumType.STRING)
-    HallType hallType;
-
-    @ManyToOne
-    @JoinColumn(name = "id_cinema")
-    Cinema cinema;
-
-    int maxRow;
-    int maxColumn;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_film", nullable = false)
+    Film film;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_hall", nullable = false)
+    Hall hall;
+    Date dateTime;
 }
 
