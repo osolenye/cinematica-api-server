@@ -15,7 +15,7 @@ public class OrderDetailsDto {
     double price;
     int num;
 
-    OrderDto orderDto;
-    SeatDto seatDto;
-    SessionDto sessionDto;
+    OrderDto order;
+    SeatDto seat;
+    SessionDto session;
 }

@@ -53,9 +53,9 @@ public class OrderDetailsServiceImpl implements OrderDetailsService {
             orderDetailsDto.setPrice(request.getPrice());
             orderDetailsDto.setNum(request.getNum());
 
-            orderDetailsDto.setSessionDto(SessionMapper.MAPPER.entityToDto(sessionService.findById(request.getSessionId())));
-            orderDetailsDto.setOrderDto(OrderMapper.MAPPER.entityToDto(orderService.findById(request.getOrderId())));
-            orderDetailsDto.setSeatDto(SeatMapper.MAPPER.entityToDto(seatService.findById(request.getSeatId())));
+            orderDetailsDto.setSession(SessionMapper.MAPPER.entityToDto(sessionService.findById(request.getSessionId())));
+            orderDetailsDto.setOrder(OrderMapper.MAPPER.entityToDto(orderService.findById(request.getOrderId())));
+            orderDetailsDto.setSeat(SeatMapper.MAPPER.entityToDto(seatService.findById(request.getSeatId())));
             return save(orderDetailsDto);
         } catch (Exception e) {
             throw  new RuntimeException(e.getMessage());
